@@ -10,6 +10,6 @@
 
 
 
-![ClassDiagramDoctor](https://github.com/user-attachments/assets/e9b230ee-7452-48c9-bac4-7f9944f649fa)
 
+![ClassDiagramDoctorFinal](https://github.com/user-attachments/assets/dcc3c5f6-49bb-4021-a697-c5c6fe519db4)
 
