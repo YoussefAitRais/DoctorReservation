@@ -13,3 +13,37 @@
 
 ![ClassDiagramDoctor](https://github.com/user-attachments/assets/d4879539-c8c9-4507-bef6-19d062b1b681)
 
+
+
+
+
+-- Create the database
+CREATE DATABASE DoctorRV;
+USE DoctorRV;
+
+-- Table for Doctors
+CREATE TABLE Doctor (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    adresse VARCHAR(255),
+    phone VARCHAR(20)
+);
+
+-- Table for Patients
+CREATE TABLE Patient (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    phone VARCHAR(20),
+    adresse VARCHAR(255)
+);
+
+-- Table for Appointments (Rendez-vous)
+CREATE TABLE RendezVous (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    time TIME NOT NULL,
+    date DATE NOT NULL,
+    patientID INT,
+    doctorID INT,
+    FOREIGN KEY (patientID) REFERENCES Patient(id) ON DELETE CASCADE,
+    FOREIGN KEY (doctorID) REFERENCES Doctor(id) ON DELETE CASCADE
+);
