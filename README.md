@@ -11,5 +11,5 @@
 
 
 
-![ClassDiagramDoctorFinal](https://github.com/user-attachments/assets/dcc3c5f6-49bb-4021-a697-c5c6fe519db4)
+![ClassDiagramDoctor](https://github.com/user-attachments/assets/d4879539-c8c9-4507-bef6-19d062b1b681)
 
