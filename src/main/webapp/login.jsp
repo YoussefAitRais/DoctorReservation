@@ -7,7 +7,7 @@
     <title>Connexion - DoctorRV</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body  class="bg-cover bg-center h-screen  items-center justify-center bg-opacity-75" style="background-image: url('./image/reservation.jpg')"">
 
 <!-- Navbar -->
 <nav class="bg-blue-600 p-4 text-white shadow-md">
