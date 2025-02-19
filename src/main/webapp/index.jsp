@@ -15,8 +15,8 @@
     <p class="text-lg text-gray-700 mb-8">Système de réservation de rendez-vous médicaux</p>
 
     <div class="flex space-x-6">
-        <a href="/Doctor/HelloServlet" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition">Connexion</a>
-        <a href="/register/HelloServlet" class="px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition">S'inscrire</a>
+        <a href="login.jsp" class="px-6 py-3 bg-blue-600 text-white rounded-lg shadow-lg hover:bg-blue-700 transition">Connexion</a>
+        <a href="register.jsp" class="px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition">S'inscrire</a>
     </div>
 </div>
 </body>
