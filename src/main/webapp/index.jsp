@@ -9,7 +9,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-100">
+<body class="bg-[url('/image/doctor-bg.jpg')]">
 <div class="min-h-screen flex flex-col items-center justify-center">
     <h1 class="text-4xl font-bold text-blue-600 mb-6">Bienvenue sur DoctorRV</h1>
     <p class="text-lg text-gray-700 mb-8">Système de réservation de rendez-vous médicaux</p>

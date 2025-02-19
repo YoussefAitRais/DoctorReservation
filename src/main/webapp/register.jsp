@@ -7,7 +7,7 @@
     <title>Inscription - DoctorRV</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100  items-center justify-center min-h-screen">
 <!-- Navbar -->
 <nav class="bg-blue-600 p-4 text-white shadow-md">
     <div class="container mx-auto flex justify-between items-center">
