@@ -19,14 +19,19 @@
             <a href="login.jsp" class="hover:underline">Connexion</a>
             <a href="register.jsp" class="hover:underline">S'inscrire</a>
 
-            <!-- Menu déroulant Dashboard sans JavaScript -->
             <div class="relative group">
-                <button class="px-4 py-2 bg-white text-black font-bold rounded-lg hover:bg-blue-500 transition">
-                    Dashboard
+                <button class="px-5 py-2.5 text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm text-center inline-flex items-center">
+                    Vous êtes
                 </button>
-                <div class="absolute hidden group-hover:block right-0 mt-2 w-48 bg-white shadow-lg rounded-lg">
-                    <a href="patient-dashboard.jsp" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard Patient</a>
-                    <a href="doctor-dashboard.jsp" class="block px-4 py-2 text-gray-700 hover:bg-gray-100">Dashboard Médecin</a>
+                <div class="absolute hidden group-hover:block bg-white divide-y divide-gray-100 rounded-lg shadow-sm w-44">
+                    <ul class="py-2 text-sm text-gray-700">
+                        <li>
+                            <a href="patient-dashboard.jsp" class="block px-4 py-2 hover:bg-gray-100">Patient</a>
+                        </li>
+                        <li>
+                            <a href="doctor-dashboard.jsp" class="block px-4 py-2 hover:bg-gray-100">Médecin</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
