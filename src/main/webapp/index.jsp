@@ -11,9 +11,12 @@
 <body class="bg-cover bg-center h-screen flex flex-col items-center justify-center bg-opacity-75"
       style="background-image: url('./image/doctor.jpg')">
 
+<!-- Navbar -->
 <nav class="bg-blue-600 p-4 text-white shadow-md fixed top-0 w-full z-50">
     <div class="container mx-auto flex justify-between items-center">
         <a href="index.jsp" class="text-xl font-bold">DoctorRV</a>
+
+
 
         <div class="hidden md:flex space-x-6 items-center" id="menu">
             <a href="indexServlet" class="hover:underline">Accueil</a>
@@ -40,6 +43,7 @@
     </div>
 </nav>
 
+<!-- Main Content -->
 <div class="flex flex-col items-center justify-center space-y-6 mt-20">
     <h1 class="text-4xl font-bold text-blue-600">Bienvenue sur DoctorRV</h1>
     <p class="text-lg text-black font-bold">Système de réservation de rendez-vous médicaux</p>
@@ -49,5 +53,17 @@
         <a href="register.jsp" class="px-6 py-3 bg-green-600 text-white rounded-lg shadow-lg hover:bg-green-700 transition">S'inscrire</a>
     </div>
 </div>
+
+<!-- JavaScript for Dropdown -->
+<script>
+    document.getElementById("dropdown-btn").addEventListener("click", function () {
+        document.getElementById("dropdown-menu").classList.toggle("hidden");
+    });
+
+    document.getElementById("menu-btn").addEventListener("click", function () {
+        document.getElementById("menu").classList.toggle("hidden");
+    });
+</script>
+
 </body>
 </html>
