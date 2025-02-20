@@ -1,4 +1,7 @@
+<%@ page import="java.util.List" %>
+<%@ page import="com.code.Model.Doctor" %>
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,19 +15,44 @@
     <h1 class="text-3xl font-bold text-blue-600 mb-6">Bienvenue, Docteur</h1>
 
     <div class="bg-white shadow-lg rounded-lg p-6">
-        <h2 class="text-xl font-semibold mb-4">Liste des Rendez-vous</h2>
+        <h2 class="text-xl font-semibold mb-4">Liste des Médecins</h2>
+
         <table class="w-full border-collapse">
             <thead>
             <tr class="bg-blue-600 text-white">
-                <th class="p-3">Patient</th>
-                <th class="p-3">Date</th>
-                <th class="p-3">Heure</th>
-                <th class="p-3">Motif</th>
+                <th class="p-3">ID</th>
+                <th class="p-3">Nom</th>
+                <th class="p-3">Adresse</th>
+                <th class="p-3">Téléphone</th>
                 <th class="p-3">Action</th>
             </tr>
             </thead>
             <tbody>
-            <!-- Ajouter les rendez-vous dynamiques ici -->
+            <%
+                List<Doctor> doctors = (List<Doctor>) request.getAttribute("doctors");
+                if (doctors != null) {
+                    for (Doctor doctor : doctors) {
+            %>
+            <tr class="border-b">
+                <td class="p-3"><%= doctor.getId() %></td>
+                <td class="p-3"><%= doctor.getName() %></td>
+                <td class="p-3"><%= doctor.getAdresse() %></td>
+                <td class="p-3"><%= doctor.getPhone() %></td>
+                <td class="p-3">
+                    <form action="doctor" method="post">
+                        <input type="hidden" name="id" value="<%= doctor.getId() %>">
+                        <button type="submit" class="bg-red-500 text-white px-4 py-1 rounded">Supprimer</button>
+                    </form>
+                </td>
+            </tr>
+            <%
+                }
+            } else {
+            %>
+            <tr>
+                <td colspan="5" class="text-center p-3">Aucun médecin trouvé</td>
+            </tr>
+            <% } %>
             </tbody>
         </table>
     </div>

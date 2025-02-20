@@ -25,12 +25,12 @@
         <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-2 border rounded-lg">
         <input type="tel" name="phone" placeholder="Téléphone" required class="w-full px-4 py-2 border rounded-lg">
 
-        <select name="doctorID" required class="w-full px-4 py-2 border rounded-lg">
-            <option value="">Sélectionner un médecin</option>
-            <% for (Doctor doctor : doctors) { %>
-            <option value="<%= doctor.getId() %>"><%= doctor.getName() %> - <%= doctor.getAdresse() %></option>
-            <% } %>
-        </select>
+<%--        <select name="doctorID" required class="w-full px-4 py-2 border rounded-lg">--%>
+<%--            <option value="">Sélectionner un médecin</option>--%>
+<%--            <% for (Doctor doctor : doctors) { %>--%>
+<%--            <option value="<%= doctor.getId() %>"><%= doctor.getName() %> - <%= doctor.getAdresse() %></option>--%>
+<%--            <% } %>--%>
+<%--        </select>--%>
 
         <input type="date" name="date" required class="w-full px-4 py-2 border rounded-lg">
         <input type="time" name="time" required class="w-full px-4 py-2 border rounded-lg">

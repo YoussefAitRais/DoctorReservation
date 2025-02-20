@@ -31,7 +31,7 @@ public class DoctorServlet extends HttpServlet {
         Doctor doctor = new Doctor(name, adresse, phone);
         doctorDAO.addDoctor(doctor);
 
-        response.sendRedirect("doctor"); // Refresh list after adding
+        response.sendRedirect("doctor-dashboard.jsp"); // Refresh list after adding
     }
 
     @Override

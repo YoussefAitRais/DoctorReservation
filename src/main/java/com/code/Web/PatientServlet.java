@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.List;
 
-@WebServlet("/patient")
+@WebServlet("/PatientServlet")
 public class PatientServlet extends HttpServlet {
     private PatientDAO patientDAO = new PatientDAO();
 
@@ -31,13 +31,13 @@ public class PatientServlet extends HttpServlet {
         Patient patient = new Patient(name, phone, adresse);
         patientDAO.addPatient(patient);
 
-        response.sendRedirect("patient");
+        response.sendRedirect("Appointment.jsp");
     }
 
     @Override
     protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         patientDAO.deletePatient(id);
-        response.sendRedirect("patient");
+        response.sendRedirect("patient-dashboard.jsp");
     }
 }
