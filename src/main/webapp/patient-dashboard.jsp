@@ -29,7 +29,7 @@
         </table>
     </div>
 
-    <a href="book-appointment.jsp" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-green-700 transition">Prendre un Rendez-vous</a>
+    <a href="Appointment.jsp" class="mt-4 inline-block bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-green-700 transition">Prendre un Rendez-vous</a>
 </div>
 </body>
 </html>

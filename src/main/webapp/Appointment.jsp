@@ -1,4 +1,13 @@
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.code.Model.Doctor" %>
+
+<%@ page import="com.code.DAO.DoctorDAO" %>
+<%
+    DoctorDAO doctorDAO = new DoctorDAO();
+    List<Doctor> doctors = doctorDAO.getAllDoctors();
+%>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,18 +16,20 @@
     <title>Prendre un Rendez-vous</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-cover bg-center h-screen flex items-center justify-center min-h-screen" style="background-image: url('./image/reservation.jpg')">
 <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
     <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Prendre un Rendez-vous</h2>
 
-    <form action="BookAppointmentServlet" method="post" class="space-y-4">
+    <form action="appointment" method="post" class="space-y-4">
         <input type="text" name="username" placeholder="Nom complet" required class="w-full px-4 py-2 border rounded-lg">
         <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-2 border rounded-lg">
         <input type="tel" name="phone" placeholder="Téléphone" required class="w-full px-4 py-2 border rounded-lg">
 
-        <select name="doctor" required class="w-full px-4 py-2 border rounded-lg">
+        <select name="doctorID" required class="w-full px-4 py-2 border rounded-lg">
             <option value="">Sélectionner un médecin</option>
-            <!-- Ajouter des options dynamiques ici -->
+            <% for (Doctor doctor : doctors) { %>
+            <option value="<%= doctor.getId() %>"><%= doctor.getName() %> - <%= doctor.getAdresse() %></option>
+            <% } %>
         </select>
 
         <input type="date" name="date" required class="w-full px-4 py-2 border rounded-lg">
