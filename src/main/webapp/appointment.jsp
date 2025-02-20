@@ -20,18 +20,10 @@
 <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
     <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Prendre un Rendez-vous</h2>
 
-    <form action="appointment" method="post" class="space-y-4">
+    <form action="/appointment" method="post" class="space-y-4">
         <input type="text" name="username" placeholder="Nom complet" required class="w-full px-4 py-2 border rounded-lg">
         <input type="email" name="email" placeholder="Email" required class="w-full px-4 py-2 border rounded-lg">
         <input type="tel" name="phone" placeholder="Téléphone" required class="w-full px-4 py-2 border rounded-lg">
-
-<%--        <select name="doctorID" required class="w-full px-4 py-2 border rounded-lg">--%>
-<%--            <option value="">Sélectionner un médecin</option>--%>
-<%--            <% for (Doctor doctor : doctors) { %>--%>
-<%--            <option value="<%= doctor.getId() %>"><%= doctor.getName() %> - <%= doctor.getAdresse() %></option>--%>
-<%--            <% } %>--%>
-<%--        </select>--%>
-
         <input type="date" name="date" required class="w-full px-4 py-2 border rounded-lg">
         <input type="time" name="time" required class="w-full px-4 py-2 border rounded-lg">
 

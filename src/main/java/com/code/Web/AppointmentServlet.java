@@ -13,7 +13,7 @@ import java.sql.Date;
 import java.sql.Time;
 import java.util.List;
 
-@WebServlet("/appointment")
+@WebServlet("/AppointmentServlet")
 public class AppointmentServlet extends HttpServlet {
     private AppointmentDAO appointmentDAO = new AppointmentDAO();
 
@@ -21,7 +21,7 @@ public class AppointmentServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Appointment> appointments = appointmentDAO.getAllAppointments();
         request.setAttribute("appointments", appointments);
-        request.getRequestDispatcher("WEB-INF/views/appointments.jsp").forward(request, response);
+        request.getRequestDispatcher("appointment.jsp").forward(request, response);
     }
 
     @Override
@@ -34,13 +34,14 @@ public class AppointmentServlet extends HttpServlet {
         Appointment appointment = new Appointment(time, date, patientID, doctorID);
         appointmentDAO.addAppointment(appointment);
 
-        response.sendRedirect("appointment");
+        response.sendRedirect("/Doctor/appointment");
     }
 
     @Override
-    protected void doDelete(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         appointmentDAO.deleteAppointment(id);
-        response.sendRedirect("appointment");
+        response.sendRedirect("appointment.jsp");
     }
 }

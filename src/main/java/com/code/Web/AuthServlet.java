@@ -9,10 +9,12 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet("/auth")
-public class AuthServlet extends HttpServlet {
+public class
+AuthServlet extends HttpServlet {
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
@@ -20,7 +22,7 @@ public class AuthServlet extends HttpServlet {
         if ("admin".equals(username) && "password".equals(password)) {
             HttpSession session = request.getSession();
             session.setAttribute("user", username);
-            response.sendRedirect("dashboard.jsp");
+            response.sendRedirect("AuthServlet");
         } else {
             request.setAttribute("error", "Invalid login");
             request.getRequestDispatcher("login.jsp").forward(request, response);
@@ -28,7 +30,8 @@ public class AuthServlet extends HttpServlet {
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws IOException {
         HttpSession session = request.getSession();
         session.invalidate(); // Logout
         response.sendRedirect("login.jsp");

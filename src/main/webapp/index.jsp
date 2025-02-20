@@ -16,14 +16,9 @@
     <div class="container mx-auto flex justify-between items-center">
         <a href="index.jsp" class="text-xl font-bold">DoctorRV</a>
 
-
-
-        <div class="hidden md:flex space-x-6 items-center" id="menu">
-            <a href="indexServlet" class="hover:underline">Accueil</a>
-            <a href="login.jsp" class="hover:underline">Connexion</a>
-            <a href="register.jsp" class="hover:underline">S'inscrire</a>
-
-            <!-- Dropdown Menu -->
+        <!-- Navigation Links -->
+        <div class="flex space-x-6 items-center">
+            <!-- Dropdown Menu beside Accueil -->
             <div class="relative">
                 <button id="dropdown-btn" class="px-5 py-2 bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm inline-flex items-center">
                     Vous êtes
@@ -39,6 +34,10 @@
                     </ul>
                 </div>
             </div>
+
+            <a href="indexServlet" class="hover:underline">Accueil</a>
+            <a href="login.jsp" class="hover:underline">Connexion</a>
+            <a href="register.jsp" class="hover:underline">S'inscrire</a>
         </div>
     </div>
 </nav>
@@ -58,10 +57,6 @@
 <script>
     document.getElementById("dropdown-btn").addEventListener("click", function () {
         document.getElementById("dropdown-menu").classList.toggle("hidden");
-    });
-
-    document.getElementById("menu-btn").addEventListener("click", function () {
-        document.getElementById("menu").classList.toggle("hidden");
     });
 </script>
 

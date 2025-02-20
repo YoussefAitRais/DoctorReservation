@@ -19,7 +19,7 @@ public class DoctorServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         List<Doctor> doctors = doctorDAO.getAllDoctors();
         request.setAttribute("doctors", doctors);
-        request.getRequestDispatcher("WEB-INF/views/doctors.jsp").forward(request, response);
+        request.getRequestDispatcher("doctor-dashboard.jsp").forward(request, response);
     }
 
     @Override
